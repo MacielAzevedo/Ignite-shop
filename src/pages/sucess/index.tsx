@@ -7,6 +7,7 @@ import {
 } from '@/src/styles/pages/sucess';
 import { GetServerSideProps } from 'next';
 import Stripe from 'stripe';
+import Head from 'next/head';
 
 interface SucessProps {
   customerName: string;
@@ -18,20 +19,26 @@ interface SucessProps {
 
 export default function Sucess({ customerName, product }: SucessProps) {
   return (
-    <SucessContainer>
-      <h1>Compra efetuada!</h1>
+    <>
+      <Head>
+        <title>Compra efetuada | Ignite Shop</title>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <SucessContainer>
+        <h1>Compra efetuada!</h1>
 
-      <ImageContainer>
-        <Image src={product.imageUrl} width={120} height={110} alt="" />
-      </ImageContainer>
+        <ImageContainer>
+          <Image src={product.imageUrl} width={120} height={110} alt="" />
+        </ImageContainer>
 
-      <p>
-        Uhuul <strong>{customerName}</strong>, sua{' '}
-        <strong>{product.name}</strong> já está a caminho da sua casa.
-      </p>
+        <p>
+          Uhuul <strong>{customerName}</strong>, sua{' '}
+          <strong>{product.name}</strong> já está a caminho da sua casa.
+        </p>
 
-      <Button href="/">Voltar ao catálogo</Button>
-    </SucessContainer>
+        <Button href="/">Voltar ao catálogo</Button>
+      </SucessContainer>
+    </>
   );
 }
 
