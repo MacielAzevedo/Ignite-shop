@@ -23,7 +23,6 @@ export default function Home({products}: HomeProps) {
       spacing: 48
     }
   })
-
   return (
     <HomeContainer ref={sliderRef} className="keen-slider">
       {products.map(product => {
@@ -59,6 +58,7 @@ export const getStaticProps:GetStaticProps = async () => {
       currency: 'BRL',
       // @ts-ignore
     }).format(price.unit_amount / 100)
+    
     return {
       id: product.id,
       name: product.name,
