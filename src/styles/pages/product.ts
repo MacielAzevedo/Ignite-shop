@@ -1,4 +1,4 @@
-import { styled } from "..";
+import { styled } from '..';
 
 export const ProductContainer = styled('main', {
   display: 'grid',
@@ -6,14 +6,20 @@ export const ProductContainer = styled('main', {
   alignItems: 'stretch',
   gap: '4rem',
   maxWidth: 1180,
-  margin: '0 auto'
-})
+  margin: '0 auto',
+  '@media (max-width: 450px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: '0 1.5rem',
+    marginBottom: '1.2rem',
+  },
+});
 
 export const ImageContainer = styled('div', {
   width: '100%',
   maxWidth: 576,
   height: 656,
-  background:'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
+  background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
   borderRadius: 8,
   padding: '0.25rem',
 
@@ -22,9 +28,9 @@ export const ImageContainer = styled('div', {
   justifyContent: 'center',
 
   img: {
-    objectFit: 'cover'
-  }
-})
+    objectFit: 'cover',
+  },
+});
 
 export const ProductDetail = styled('div', {
   display: 'flex',
@@ -39,14 +45,14 @@ export const ProductDetail = styled('div', {
     marginTop: '1rem',
     display: 'block',
     fontSize: '$2xl',
-    color: '$green300'
+    color: '$green300',
   },
 
   p: {
     marginTop: '2.5rem',
     fontSize: '$md',
     lineHeight: 1.6,
-    color: '$gray100'
+    color: '$gray100',
   },
 
   button: {
@@ -62,11 +68,22 @@ export const ProductDetail = styled('div', {
 
     '&:disabled': {
       opacity: 0.6,
-      cursor: 'not-allowed'
+      cursor: 'not-allowed',
     },
-    
+
     '&:not(:disabled):hover': {
       backgroundColor: '$green300',
-    }
-  }
-})
+    },
+  },
+
+  '@media (max-width: 450px)': {
+    p: {
+      fontSize: '$2xl',
+      textAlign: 'justify',
+    },
+    button: {
+      marginTop: '2rem',
+      fontSize: '$xl',
+    },
+  },
+});

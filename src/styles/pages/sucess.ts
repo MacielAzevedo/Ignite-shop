@@ -21,6 +21,15 @@ export const SucessContainer = styled('main', {
     textAlign: 'center',
     marginTop: '2rem',
     lineHeight: 1.4,
+    strong: {
+      color: '$green300',
+    },
+  },
+  '@media (max-width: 450px)': {
+    height: 'auto',
+    p: {
+      marginTop: '1.2rem',
+    },
   },
 });
 
@@ -40,6 +49,10 @@ export const ImageContainer = styled('div', {
   img: {
     objectFit: 'cover',
   },
+
+  '@media (max-width: 450px)': {
+    marginTop: '1.2rem',
+  },
 });
 
 export const Button = styled(Link, {
@@ -51,5 +64,9 @@ export const Button = styled(Link, {
 
   '&:hover': {
     color: '$green300',
+  },
+
+  '@media (max-width: 450px)': {
+    margin: '0.5rem 0',
   },
 });
