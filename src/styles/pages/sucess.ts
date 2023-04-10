@@ -25,7 +25,7 @@ export const SucessContainer = styled('main', {
       color: '$green300',
     },
   },
-  '@media (max-width: 450px)': {
+  '@media (max-width: 768px)': {
     height: 'auto',
     p: {
       marginTop: '1.2rem',
@@ -50,7 +50,7 @@ export const ImageContainer = styled('div', {
     objectFit: 'cover',
   },
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 768px)': {
     marginTop: '1.2rem',
   },
 });
@@ -68,5 +68,9 @@ export const Button = styled(Link, {
 
   '@media (max-width: 450px)': {
     margin: '0.5rem 0',
+  },
+
+  '@media (max-width: 768px)': {
+    margin: '1.5rem 0',
   },
 });

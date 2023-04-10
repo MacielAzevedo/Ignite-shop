@@ -10,6 +10,12 @@ export const HomeContainer = styled('main', {
   '@media (min-width: 320px) and (max-width: 1440px)': {
     minHeight: 'calc(100vh - 120px)',
   },
+  '@media (min-width: 768px) and (max-width:768px)': {
+    maxWidth: 'calc(100vw - ((100vw - 668px) / 2))',
+  },
+  '@media (min-width: 1024px) and (max-width:1024px)': {
+    maxWidth: 'calc(100vw - ((100vw - 924px) / 2))',
+  },
 });
 
 export const Product = styled(Link, {
@@ -66,11 +72,21 @@ export const Product = styled(Link, {
     },
   },
 
-  '@media (max-width: 450px)': {
+  '@media (max-width: 768px)': {
     marginBottom: '0.5rem',
     img: {
       height: 350,
     },
+    footer: {
+      alignItems: 'flex-start',
+      'strong, span': {
+        fontSize: '$md',
+      },
+    },
+  },
+
+  '@media (min-width: 1024px) and (max-width: 1440px)': {
+    marginBottom: '0.5rem',
     footer: {
       alignItems: 'flex-start',
       'strong, span': {
